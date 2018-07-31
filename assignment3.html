@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+     <script>
+     	function val(){
+     		var name = document.getElementById("name").value;
+     		if(name=="" ||name==null)
+    		{
+    			alert("Enter your name");
+    			return false;
+    		}
+    		var add=document.getElementById("address").value;
+    		var mail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    		if(add.match(mail))
+    		{
+            return true;
+    		}
+    		else
+    		{
+    			alert("Please Enter an valid email address");
+    		
+    		}
+    		var pass=document.getElementById("password")
+    		var pass=  /^[A-Za-]\w{7,15}$/;
+    		if(pass==""||pass==null){
+    			alert("Enter");
+            return true;
+    		}else{
+    		 alert("Thank you");
+    		}
+    	}
+    </script>
+</head>
+<body class="bdy">
+    <header class="head"> 
+        <div class="child">
+        <section class="contener1">
+           <img src="1.jpg" alt="login" class="login-image">
+            <div class="center"><h2>Wellcome to"hotel name"your hotel moto.</h2></div>
+        </section>
+        <section  class="contener2">
+            <div class="f1">
+            <form  class="form" method="post">
+                <div class="lbl">
+                <label>Name</label>
+                </div>
+                <div class="lbl">
+                <input type="text" name="name"placeholder="Name" id="name" onblur="return val()">
+                </div>
+                <div class="lbl">
+                <label>address</label>
+                </div>
+                <div class="lbl">
+                <input type="text" name="address" placeholder="address" id="address" onblur="return val()">
+                </div>
+                <div class="lbl">
+                <label>password</label>
+                </div>
+                <div class="lbl">
+                <input type="password"name="password" placeholder="Enter your password" id="password">
+                </div>
+                <div class="lbl">
+                <label>Email</label></div>
+                <div class="lbl">
+                <input type="email"name="email" placeholder="Email address" id="email">
+                </div>
+                <div class="lbl">
+                <input type="submit" name="Submit" value="Submit" onclick="return val()" class="btn">
+                <a href="#" class="member">I am already a member</a>
+                </div>
+            </form>
+            </div>
+        </section>
+        </div>
+    </header>
+   
+</body>
+</html>
